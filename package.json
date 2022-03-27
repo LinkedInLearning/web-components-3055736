@@ -1,0 +1,15 @@
+{
+  "name": "web-components-3055736",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "parcel": "^2.4.0"
+  }
+}

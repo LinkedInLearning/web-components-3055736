@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>My favorite Recipes</title>
+    <title>Meine Lieblingsrezepte</title>
 
     <style>
       .recipes {
@@ -16,30 +16,57 @@
       }
 
       .recipe {
-        padding: 3em;
+        padding: 2em 3em;
         background-color: #f2f2f2;
+        margin-bottom: 2em;
       }
       .recipe :first-child {
         margin-top: 0;
+      }
+      .recipe .ingredients-list {
+        border-left: 5px solid salmon;
+        line-height: 1.7;
       }
     </style>
   </head>
   <body>
     <div class="recipes">
-      <h1>Meine Rezepte</h1>
+      <h1>
+        Meine Rezepte <span id="recipeCounter">2</span>
+      </h1>
       <article class="recipe">
         <h1>Tomatencremesuppe</h1>
 
-        <ol>
-          <li>760g frische Tomaten</li>
-          <li>300ml Gemüsebrühe</li>
-          <li>4EL Olivenöl</li>
-          <li>1 Schalotte</li>
-          <li>3 EL Tomatenmark</li>
-          <li>100g Hafer Cuisine</li>
-        </ol>
+        <section>
+          <h2>Zutaten:</h2>
+          <ol class="ingredients-list">
+            <li>760g frische Tomaten</li>
+            <li>300ml Gemüsebrühe</li>
+            <li>4EL Olivenöl</li>
+            <li>1 Schalotte</li>
+            <li>3 EL Tomatenmark</li>
+            <li>100g Hafer Cuisine</li>
+          </ol>
+        </section>
 
-        <p></p>
+        <section>
+          <h2>Zubereitung:</h2>
+          <p>
+            Die Tomaten mit etwas Öl in einer Pfanne
+            erhitzen.
+          </p>
+
+          <p>
+            Nach 5min die Schalotte (in Würfeln) und das
+            Tomatenmark dazugeben.
+          </p>
+
+          <p>
+            Nun alle Zutaten zusammen in einen
+            Hochleistungsmixer geben und auf höchster Stufe
+            für 2 Minuten mixen.
+          </p>
+        </section>
 
         <footer>
           <small>Rezepthinweise: Glutenfrei, Vegan</small>

@@ -5,4 +5,6 @@ class MyRecipe extends HTMLElement {
   }
 }
 
-customElements.define("my-recipe", MyRecipe);
+customElements.define("my-recipe", MyRecipe, {
+  extends: "article",
+});

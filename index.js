@@ -8,6 +8,11 @@ class MyRecipe extends HTMLElement {
     console.log("i am connected");
     this.classList.add("fade-in");
   }
+
+  disconnectedCallback() {
+    console.log("i am disconnected");
+    this.classList.remove("fade-in");
+  }
 }
 
 customElements.define("my-recipe", MyRecipe, {

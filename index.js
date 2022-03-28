@@ -3,8 +3,15 @@ class MyRecipe extends HTMLElement {
     super();
     console.log("Ich wurde instanziiert");
   }
+
+  connectedCallback() {
+    console.log("i am connected");
+    this.classList.add("fade-in");
+  }
 }
 
 customElements.define("my-recipe", MyRecipe, {
   extends: "article",
 });
+
+document.createElement("article", { is: "my-recipe" });

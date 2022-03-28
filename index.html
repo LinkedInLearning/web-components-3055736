@@ -11,7 +11,6 @@
 
     <style>
       .recipes {
-        width: 95%;
         max-width: 700px;
         margin: auto;
       }
@@ -23,6 +22,8 @@
       }
       .recipe :first-child {
         margin-top: 0;
+      }
+      .recipe h1 {
       }
       .recipe .ingredients-list {
         border-left: 5px solid salmon;
@@ -56,7 +57,7 @@
         <span id="recipeCounter">(2 Stück)</span>
       </h1>
 
-      <article class="recipe">
+      <my-recipe class="recipe">
         <h1>Tomatencremesuppe</h1>
 
         <section>
@@ -94,9 +95,9 @@
           <div class="tag tag-info">Glutenfrei</div>
           <div class="tag tag-green">Vegan</div>
         </footer>
-      </article>
+      </my-recipe>
 
-      <article class="recipe">
+      <my-recipe class="recipe">
         <h1>Frühstückssmoothie</h1>
 
         <section>
@@ -135,9 +136,9 @@
           <div class="tag tag-warn">Sellerie</div>
           <div class="tag tag-warn">Karotten</div>
         </footer>
-      </article>
-    </div>
+      </my-recipe>
 
-    <script src="./index.js"></script>
+      <script src="./index.js"></script>
+    </div>
   </body>
 </html>

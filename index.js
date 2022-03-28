@@ -13,5 +13,3 @@ class MyRecipe extends HTMLElement {
 customElements.define("my-recipe", MyRecipe, {
   extends: "article",
 });
-
-document.createElement("article", { is: "my-recipe" });

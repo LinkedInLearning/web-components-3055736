@@ -69,6 +69,19 @@ class MyIngredient extends HTMLLIElement {
   }
 }
 
+class MyIngredients extends HTMLElement {
+  constructor() {
+    super();
+    const h2 = document.createElement("h2");
+    h2.innerText = "Zutaten:";
+    const shadowDom = this.attachShadow({ mode: "open" });
+    shadowDom.appendChild(h2);
+    shadowDom.appendChild(this.children[0]);
+  }
+}
+
+customElements.define("my-ingredients", MyIngredients);
+
 customElements.define("my-recipe", MyRecipe, {
   extends: "article",
 });

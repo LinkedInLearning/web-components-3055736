@@ -106,6 +106,12 @@ class MyInstructions extends HTMLElement {
       </figure>
     `;
     shadow.appendChild(imageWrapper);
+
+    // 1. Slot hinzufügen
+    // 2. Wenn slot gefüllt ("slotchange" event)
+    //     -> Bild-URL auslesen (img.src)
+    //        Tipp: slotElement.assignedElements() Methode
+    // 3. Bild-URL in figcaption schreiben
   }
 }
 

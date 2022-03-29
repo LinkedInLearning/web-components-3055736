@@ -66,12 +66,15 @@ class MyTaglist extends HTMLElement {
   }
 }
 
-class MyIngredient extends HTMLLIElement {
+class MyIngredient extends HTMLElement {
   constructor() {
     super();
-    const input = document.createElement("input");
-    input.setAttribute("type", "checkbox");
-    this.prepend(input);
+    const template = document.getElementById(
+      "ingredientTemplate"
+    );
+    const copiedTemplate = template.content.cloneNode(true);
+    const shadow = this.attachShadow({ mode: "open" });
+    shadow.appendChild(copiedTemplate);
   }
 }
 
@@ -137,6 +140,4 @@ customElements.define("my-taglist", MyTaglist, {
   extends: "footer",
 });
 
-customElements.define("my-ingredient", MyIngredient, {
-  extends: "li",
-});
+customElements.define("my-ingredient", MyIngredient);

@@ -68,6 +68,15 @@
       <slot name="instructions"></slot>
     </template>
 
+    <template id="ingredientTemplate">
+      <style>
+        :host {
+          display: list-item;
+        }
+      </style>
+      <input type="checkbox" /> <slot></slot>
+    </template>
+
     <div class="recipes">
       <h1>
         Meine Rezepte
@@ -82,12 +91,16 @@
 
         <my-ingredients slot="ingredients">
           <ol class="ingredients-list">
-            <li is="my-ingredient">760g frische Tomaten</li>
-            <li is="my-ingredient">300ml Gemüsebrühe</li>
-            <li is="my-ingredient">4EL Olivenöl</li>
-            <li is="my-ingredient">1 Schalotte</li>
-            <li is="my-ingredient">3 EL Tomatenmark</li>
-            <li is="my-ingredient">100g Hafer Cuisine</li>
+            <my-ingredient
+              >760g frische Tomaten</my-ingredient
+            >
+            <my-ingredient>300ml Gemüsebrühe</my-ingredient>
+            <my-ingredient>4EL Olivenöl</my-ingredient>
+            <my-ingredient>1 Schalotte</my-ingredient>
+            <my-ingredient>3 EL Tomatenmark</my-ingredient>
+            <my-ingredient
+              >100g Hafer Cuisine</my-ingredient
+            >
           </ol>
         </my-ingredients>
 
@@ -125,10 +138,10 @@
 
         <my-ingredients slot="ingredients">
           <ol class="ingredients-list">
-            <li is="my-ingredient">6 Orangen</li>
-            <li is="my-ingredient">2 Karotten</li>
-            <li is="my-ingredient">1 Stange Sellerie</li>
-            <li is="my-ingredient">1 TL Kurkuma</li>
+            <my-ingredient>6 Orangen</my-ingredient>
+            <my-ingredient>2 Karotten</my-ingredient>
+            <my-ingredient>1 Stange Sellerie</my-ingredient>
+            <my-ingredient>1 TL Kurkuma</my-ingredient>
           </ol>
         </my-ingredients>
 

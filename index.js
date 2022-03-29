@@ -3,18 +3,12 @@ class MyRecipe extends HTMLElement {
     super();
   }
 
-  adoptedCallback() {
-    console.log("adopted");
-  }
-
   connectedCallback() {
     this.classList.add("fade-in");
-    console.log("connected");
   }
 
   disconnectedCallback() {
     this.classList.remove("fade-in");
-    console.log("disconnected");
   }
 }
 

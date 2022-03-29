@@ -100,12 +100,22 @@ class MyInstructions extends HTMLElement {
     shadow.appendChild(instructions);
     const imageWrapper = document.createElement("div");
     imageWrapper.innerHTML = `
+      <style>
+      figure, ::slotted(img) {
+        max-width: 400px;
+      }
+      </style>
       <figure>
-        BILD
+        <slot name="image"></slot>
         <figcaption>BILDUNTERSCHRIFT</figcaption>
       </figure>
     `;
     shadow.appendChild(imageWrapper);
+    const slot = shadow.querySelector("slot");
+    slot.addEventListener("slotchange", () => {
+      shadow.querySelector("figcaption").innerText =
+        slot.assignedElements()[0].src;
+    });
   }
 }
 

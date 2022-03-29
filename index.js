@@ -107,7 +107,7 @@ class MyInstructions extends HTMLElement {
       </style>
       <figure>
         <slot name="image"></slot>
-        <figcaption>BILDUNTERSCHRIFT</figcaption>
+        <figcaption></figcaption>
       </figure>
     `;
     shadow.appendChild(imageWrapper);

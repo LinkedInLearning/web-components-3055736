@@ -1,6 +1,12 @@
 class MyRecipe extends HTMLElement {
   constructor() {
     super();
+    const template = document.getElementById(
+      "myRecipeTemplate"
+    );
+    const copiedTemplate = template.content.cloneNode(true);
+    const shadow = this.attachShadow({ mode: "open" });
+    shadow.appendChild(copiedTemplate);
   }
 
   connectedCallback() {

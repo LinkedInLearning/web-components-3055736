@@ -61,6 +61,13 @@
     </style>
   </head>
   <body>
+    <template id="myRecipeTemplate">
+      <h1><slot name="headline"></slot></h1>
+      <slot name="footer"></slot>
+      <slot name="ingredients"></slot>
+      <slot name="instructions"></slot>
+    </template>
+
     <div class="recipes">
       <h1>
         Meine Rezepte
@@ -71,9 +78,9 @@
       </h1>
 
       <article class="recipe" is="my-recipe">
-        <h1>Tomatencremesuppe</h1>
+        <span slot="headline">Tomatencremesuppe</span>
 
-        <my-ingredients>
+        <my-ingredients slot="ingredients">
           <ol class="ingredients-list">
             <li is="my-ingredient">760g frische Tomaten</li>
             <li is="my-ingredient">300ml Gemüsebrühe</li>
@@ -90,7 +97,7 @@
           <strong slot="foo">Hallo2</strong>
         </my-ingredients>
 
-        <my-instructions>
+        <my-instructions slot="instructions">
           <div class="instructions">
             <h2>Zubereitung:</h2>
             <p>
@@ -112,6 +119,7 @@
         </my-instructions>
 
         <footer
+          slot="footer"
           is="my-taglist"
           info="Glutenfrei"
           green="Vegan"

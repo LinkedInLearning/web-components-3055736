@@ -60,23 +60,10 @@ class MyTaglist extends HTMLElement {
   }
 }
 
-class MyIngredient extends HTMLLIElement {
-  constructor() {
-    super();
-    const input = document.createElement("input");
-    input.setAttribute("type", "checkbox");
-    this.prepend(input);
-  }
-}
-
 customElements.define("my-recipe", MyRecipe, {
   extends: "article",
 });
 
 customElements.define("my-taglist", MyTaglist, {
   extends: "footer",
-});
-
-customElements.define("my-ingredient", MyIngredient, {
-  extends: "li",
 });

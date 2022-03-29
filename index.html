@@ -68,6 +68,13 @@
       <slot name="instructions"></slot>
     </template>
 
+    <template id="myRecipeTemplatev2">
+      <h1><slot name="hl"></slot></h1>
+      <slot name="footer"></slot>
+      <slot name="ingredients"></slot>
+      <slot name="instructions"></slot>
+    </template>
+
     <template id="ingredientTemplate">
       <style>
         :host {
@@ -133,8 +140,8 @@
         ></footer>
       </article>
 
-      <article class="recipe" is="my-recipe">
-        <span slot="headline">Frühstückssmoothie</span>
+      <article class="recipe" is="my-recipe-v2">
+        <span slot="hl">Frühstückssmoothie</span>
 
         <my-ingredients slot="ingredients">
           <ol class="ingredients-list">

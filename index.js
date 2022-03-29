@@ -1,12 +1,16 @@
 class MyRecipe extends HTMLElement {
-  constructor() {
+  constructor(templateName = "myRecipeTemplate") {
     super();
-    const template = document.getElementById(
-      "myRecipeTemplate"
-    );
+    const template = document.getElementById(templateName);
     const copiedTemplate = template.content.cloneNode(true);
     const shadow = this.attachShadow({ mode: "open" });
     shadow.appendChild(copiedTemplate);
+
+    if (templateName != "myRecipeTemplatev2") {
+      console.warn(
+        "This version is deprecated, please switch to my-recipe-v2"
+      );
+    }
   }
 
   connectedCallback() {
@@ -29,6 +33,12 @@ class MyRecipe extends HTMLElement {
     document.getElementById(
       "recipeCounterCount"
     ).innerText = currentCount * 1 - 1;
+  }
+}
+
+class MyRecipe2 extends MyRecipe {
+  constructor() {
+    super("myRecipeTemplatev2");
   }
 }
 
@@ -133,6 +143,10 @@ customElements.define("my-instructions", MyInstructions);
 customElements.define("my-ingredients", MyIngredients);
 
 customElements.define("my-recipe", MyRecipe, {
+  extends: "article",
+});
+
+customElements.define("my-recipe-v2", MyRecipe2, {
   extends: "article",
 });
 

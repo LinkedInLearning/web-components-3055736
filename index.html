@@ -66,7 +66,10 @@
     <div class="recipes">
       <h1>
         Meine Rezepte
-        <span id="recipeCounter">(2 Stück)</span>
+        <span id="recipeCounter"
+          >(<span id="recipeCounterCount">0</span>
+          Stück)</span
+        >
       </h1>
 
       <article class="recipe" is="my-recipe">
@@ -75,12 +78,12 @@
         <section>
           <h2>Zutaten:</h2>
           <ol class="ingredients-list">
-            <li>760g frische Tomaten</li>
-            <li>300ml Gemüsebrühe</li>
-            <li>4EL Olivenöl</li>
-            <li>1 Schalotte</li>
-            <li>3 EL Tomatenmark</li>
-            <li>100g Hafer Cuisine</li>
+            <li is="my-ingredient">760g frische Tomaten</li>
+            <li is="my-ingredient">300ml Gemüsebrühe</li>
+            <li is="my-ingredient">4EL Olivenöl</li>
+            <li is="my-ingredient">1 Schalotte</li>
+            <li is="my-ingredient">3 EL Tomatenmark</li>
+            <li is="my-ingredient">100g Hafer Cuisine</li>
           </ol>
         </section>
 

@@ -79,11 +79,17 @@
           <ol class="ingredients-list">
             <li is="my-ingredient">760g frische Tomaten</li>
             <li is="my-ingredient">300ml Gemüsebrühe</li>
-            <li is="my-ingredient">4EL Olivenöl</li>
-            <li is="my-ingredient">1 Schalotte</li>
+            <li is="my-ingredient">
+              4EL Olivenöl <slot name="foo"></slot>
+            </li>
+            <li is="my-ingredient">
+              1 Schalotte <slot name="bar"></slot>
+            </li>
             <li is="my-ingredient">3 EL Tomatenmark</li>
             <li is="my-ingredient">100g Hafer Cuisine</li>
           </ol>
+          <strong slot="bar">Hallo</strong>
+          <strong slot="foo">Hallo2</strong>
         </my-ingredients>
 
         <section>

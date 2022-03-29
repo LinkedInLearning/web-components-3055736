@@ -78,6 +78,18 @@ class MyIngredients extends HTMLElement {
     const shadowDom = this.attachShadow({
       mode: shadowMode,
     });
+    const styleTag = document.createElement("style");
+    styleTag.innerHTML = `
+    .ingredients-list {
+      border-left: 5px solid salmon;
+      line-height: 1.7;
+    }
+    ::slotted(strong) { color: blue !important }
+    :host(my-ingredients) ol { background: red }
+    :host-context(article) ol { background: yellow }
+    :host-context(article):host(my-ingredients) ol { background: yellow }
+    `;
+    shadowDom.appendChild(styleTag);
     shadowDom.appendChild(h2);
     shadowDom.appendChild(this.children[0]);
   }

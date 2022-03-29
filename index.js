@@ -84,16 +84,24 @@ class MyIngredients extends HTMLElement {
       border-left: 5px solid salmon;
       line-height: 1.7;
     }
-    ::slotted(strong) { color: blue !important }
-    :host(my-ingredients) ol { background: red }
-    :host-context(article) ol { background: yellow }
-    :host-context(article):host(my-ingredients) ol { background: yellow }
     `;
     shadowDom.appendChild(styleTag);
     shadowDom.appendChild(h2);
     shadowDom.appendChild(this.children[0]);
   }
 }
+
+class MyInstructions extends HTMLElement {
+  constructor() {
+    super();
+    const instructionsText = this.innerHTML;
+    this.innerHTML = "";
+    const shadow = this.attachShadow({ mode: "open" });
+    shadow.innerHTML = instructionsText;
+  }
+}
+
+customElements.define("my-instructions", MyInstructions);
 
 customElements.define("my-ingredients", MyIngredients);
 

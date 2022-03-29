@@ -94,10 +94,18 @@ class MyIngredients extends HTMLElement {
 class MyInstructions extends HTMLElement {
   constructor() {
     super();
-    const instructionsText = this.innerHTML;
-    this.innerHTML = "";
+    const instructions =
+      this.querySelector(".instructions");
     const shadow = this.attachShadow({ mode: "open" });
-    shadow.innerHTML = instructionsText;
+    shadow.appendChild(instructions);
+    const imageWrapper = document.createElement("div");
+    imageWrapper.innerHTML = `
+      <figure>
+        BILD
+        <figcaption>BILDUNTERSCHRIFT</figcaption>
+      </figure>
+    `;
+    shadow.appendChild(imageWrapper);
   }
 }
 

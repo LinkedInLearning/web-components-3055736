@@ -74,7 +74,10 @@ class MyIngredients extends HTMLElement {
     super();
     const h2 = document.createElement("h2");
     h2.innerText = "Zutaten:";
-    const shadowDom = this.attachShadow({ mode: "open" });
+    const shadowMode = "closed";
+    const shadowDom = this.attachShadow({
+      mode: shadowMode,
+    });
     shadowDom.appendChild(h2);
     shadowDom.appendChild(this.children[0]);
   }

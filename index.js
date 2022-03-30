@@ -1,3 +1,10 @@
+const styleSheet = new CSSStyleSheet();
+styleSheet.replaceSync(`:host { font-size: 24px }`);
+
+setTimeout(() => {
+  styleSheet.replaceSync(`:host { font-size: 8px }`);
+}, 3000);
+
 class MyRecipe extends HTMLElement {
   constructor() {
     super();
@@ -78,20 +85,15 @@ class MyIngredients extends HTMLElement {
     const shadowDom = this.attachShadow({
       mode: shadowMode,
     });
-    const styleTag = document.createElement("style");
-    styleTag.innerHTML = `
-    .ingredients-list {
-      border-left: 5px solid salmon;
-      line-height: 1.7;
-    }
-    ::slotted(strong) { color: blue !important }
-    :host(my-ingredients) ol { background: red }
-    :host-context(article) ol { background: yellow }
-    :host-context(article):host(my-ingredients) ol { background: yellow }
-    `;
-    shadowDom.appendChild(styleTag);
+    const linkTag = document.createElement("link");
+    linkTag.rel = "stylesheet";
+    linkTag.href = "http://localhost:3000/ingredients.css";
+
+    shadowDom.appendChild(linkTag);
     shadowDom.appendChild(h2);
     shadowDom.appendChild(this.children[0]);
+
+    shadowDom.adoptedStyleSheets = [styleSheet];
   }
 }
 

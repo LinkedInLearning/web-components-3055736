@@ -4,11 +4,7 @@ Dies ist das Repository für den **LinkedIn Learning** Kurs `Web Components Grun
 
 <img src="https://github.com/LinkedInLearning/web-components-3055736/blob/main/thumbnail.jpeg?raw=true" />
 
-
-
-
-
-[COURSEDESCRIPTION]
+Web Components (Webkomponenten) bezeichnen Code-Blöcke, die den inneren Aufbau von HTML-Elementen inklusive CSS und JavaScript kapseln und es so ermöglichen, die praktischen Code-Schnipsel wieder zu verwenden und projektübergreifend an jeder beliebigen Stelle in Websites zu nutzen. Der erfahrene Frontend-Architekt David Lorenz erläutert in seinem Kurs die Anwendung des Konzepts der Web Components an einem praktischen Beispiel: Dabei lernen Sie, wie Sie Custom Elements, HTML-Templates und Shadow DOM korrekt einsetzen und Sie sehen, wie aus der Kombination dieser Technologien ein mächtiges Werkzeug für Webentwickler wird. Anhand von Code-Challenges am Ende jeden Kapitels können Sie das Erlernte sofort testen und Ihre Lösung auch gleich mit der von Ihrem Trainer angebotenen Solution vergleichen.
 
 ## Anleitung
 
